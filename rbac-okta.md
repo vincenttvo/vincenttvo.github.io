@@ -1,1 +1,21 @@
+# RBAC Implementation with Okta
+
+## Objective
+Implemented role-based access control (RBAC) using Okta to reduce provisioning time by 50% and enforce least-privilege access.
+
+## Implementation Details
+- **Tools Used:** Okta, Workato, Google Workspace, M365  
+- **Scope:** Created roles for Finance, HR, and Engineering. Automated group assignments and deprovisioning.
+
+## Challenges and Solutions
+- **Challenge:** Inconsistent role definitions across departments.
+- **Solution:** Worked with stakeholders to align roles with Okta groups and implemented automation.
+
+## Screenshots
+![Okta Policy](images/okta-policy.png)
+![Workato Workflow](images/workato-flow.png)
+
+## Outcomes
+- Reduced provisioning time by 50%.
+- Simplified access reviews for SOC2 compliance.
 
