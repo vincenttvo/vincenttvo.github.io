@@ -38,7 +38,6 @@ Created Workato workflows to automate manual tasks.
 
 - [Archive Gong Call recordings](Images_Automation/automation-archive-gong-calls.png)
 
-
 ## Outcomes
 - Reduced manual actions by 50%.
 - Transformed Data to be archived in Google Drive.

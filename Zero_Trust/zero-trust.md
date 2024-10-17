@@ -1,4 +1,4 @@
-# RBAC Implementation with Okta
+# Zero Trust Policies and Models
 
 ## Objective
 Design and Implement Zero Trust models for the organization.
@@ -19,10 +19,26 @@ Design and Implement Zero Trust models for the organization.
 - Deployed Okta and Kandji Device trust onto devices to insist users to use their work machines. 
 - Disabled the ability to use windows machine to log onto company systems.
 
-
 ## Screenshots
+**Zero Trust Configurations**
+- Network Zones
+    - Created network zones to allow access from trusted areas.
+
+![Okta Network Zones](Images_Zero_Trust/okta-network-zones.png)
+
+- Adaptive MFA Okta Policies
+    - Created adaptive MFA policies based on user location, device, and role (ie. Employee, third-party, contractor)
+
+![Okta Adaptive MFA Policies](Images_Zero_Trust/okta-adaptive-mfa-auth-policies.png)
+
+- Configured Okta and Kandji to deploy certificate to endpoints to be managed devices using Okta Verify.
+    - This allowed devices to authenticate and verify they are in possession of the machine.
+
 ![Kandji and Okta Device Trust](Images_Zero_Trust/kandji-okta-device-trust.png)
 
+![Kandji and Okta Device Trust Cont.](Images_Zero_Trust/kandji-okta-device-trust-2.png)
+
+![Kandji and Okta Device Trust Cont.](Images_Zero_Trust/kandji-okta-device-trust-3.png)
 
 ## Outcomes
 - Reduced unauthorized access by 50%
