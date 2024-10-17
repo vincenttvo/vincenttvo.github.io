@@ -12,6 +12,8 @@ Implemented role-based access control (RBAC) using Okta to reduce provisioning t
 - **Solution:** Worked with stakeholders to align roles with Okta groups and implemented automation.
 
 ## Screenshots
+Okta RBAC Configurations
+    - 
 ![Okta Policy](Images/okta-policy.png)
 
 - Employee Offboarding Workflow
