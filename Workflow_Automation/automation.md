@@ -30,6 +30,11 @@ Created Workato workflows to automate manual tasks.
 
 ![Create Slack Channels](Images_Automation/automation-create-slack-channels.png)
 
+- Rename Slack Channels
+    - This workflow uses an imported CSV report into Google Sheets, that Workato can read from to read identifiers in specific columns and changes to be made from another.
+
+![Rename Slack Channels](Images_Automation/automation-slack-channel-rename.png)
+
 - Archive Zoom Calls from a CSV imported into Google Sheets
     - This workflow reads a google sheet that has an imported CSV that was obtained. Reads the CSV for the meeting ID and attributes such as name. Downloads and transforms the output information (title, name, user) for better searchability when downloaded then uploaded to Google drive
 
