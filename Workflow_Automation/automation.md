@@ -5,19 +5,25 @@ Created Workato workflows to automate manual tasks.
 
 ## Implementation Details
 **Tools Used:** 
-- Okta, Workato, Google Workspace  
+
+- Okta, Workato, Google Workspace
+
 **Scope:** 
+
 - Automate manual tasks using a low-code IPaaS solution such as Workato
 
 ## Challenges and Solutions
 **Challenge:** 
+
 - Automate manual tasks as much as possible when dealing with data, requests, and employees.
 **Solution:** 
+
 - Automated parts of the employee offboarding.
 - Automated data transformation and storage.
 
 ## Screenshots
 **Automation Workflows using Workato**
+
 - Employee Offboarding
     - This addresses different triggers and if statements in order to catch different scenarios in this specific environment. Removes access tokens and moves user to _ARCHIVE OU in Google to ensure oauth apps are removed.
 
