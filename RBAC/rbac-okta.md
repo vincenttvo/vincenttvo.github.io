@@ -19,6 +19,7 @@ Implemented role-based access control (RBAC) using Okta to reduce provisioning t
 
 ## Screenshots
 **Okta RBAC Configurations:**
+
 **Okta RBAC Groups**
 - Roles and Departments Sample
 
