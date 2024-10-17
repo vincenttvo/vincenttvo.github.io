@@ -1,4 +1,4 @@
-# Cloud Security & IAM Portfolio - Vincent Vo
+# Cloud Security & IAM Portfolio
 
 Welcome to my IAM and Automation portfolio! Below, you’ll find a collection of projects demonstrating my expertise in identity management, Zero Trust, RBAC, and Automation and more.
 
