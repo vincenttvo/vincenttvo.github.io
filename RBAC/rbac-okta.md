@@ -30,6 +30,11 @@ Okta RBAC Configurations
 
 ![Okta RBAC Group Rule Details](Images_RBAC/rbac-okta-group-rule-details.png)
 
+- Kandji Assignment Mapping (Blueprint)
+    - Used assignment mapping for devices to install or separate tools and software based on role and department.
+
+![Kandji Assignment Map](images_rbac/kandji-assignment-map.png)
+
 ## Outcomes
 - Reduced provisioning time by 50%.
 - Simplified access reviews for SOC2 compliance.
