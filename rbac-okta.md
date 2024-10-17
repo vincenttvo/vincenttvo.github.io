@@ -23,7 +23,7 @@ Okta RBAC Configurations
 ![Okta RBAC Group Rules](Images/rbac-okta-group-rules.png)
 
 - Okta Group Rule Sample Details
- - This image shows the rule using the user attribute of their title to add to this group.
+    - This image shows the rule using the user attribute of their title to add to this group.
 ![Okta RBAC Group Rule Details](Images/rbac-okta-group-rule-details.png)
 
 ## Outcomes
