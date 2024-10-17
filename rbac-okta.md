@@ -13,6 +13,9 @@ Implemented role-based access control (RBAC) using Okta to reduce provisioning t
 
 ## Screenshots
 ![Okta Policy](Images/okta-policy.png)
+
+- Employee Offboarding Workflow
+    - This addresses different triggers and if statements in order to catch different scenarios in this specific environment.
 ![Employee Offboarding Workato](Images/workato-employee-offboarding.png)
 
 ## Outcomes
