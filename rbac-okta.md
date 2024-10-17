@@ -13,7 +13,7 @@ Implemented role-based access control (RBAC) using Okta to reduce provisioning t
 
 ## Screenshots
 ![Okta Policy](images/okta-policy.png)
-![Workato Workflow](images/workato-flow.png)
+![Employee Offboarding Workato](images/workato-employee-offboarding)
 
 ## Outcomes
 - Reduced provisioning time by 50%.
