@@ -15,3 +15,8 @@
         margin: 20px;
         padding: 0;
       }
+
+      markdown {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+      }
