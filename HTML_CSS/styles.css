@@ -1,22 +1,189 @@
+/* Typography */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
 
-      body {
-        background-color: whitesmoke;
-        font-family: Arial, sans-serif;
-      }
+h1, h2, h3, h4, h5, h6 {
+  color: #2c3e50;
+  margin-bottom: 0.5em;
+}
 
-      h1 {
-        color: navy;
-        font-family: Arial, sans-serif;
-        text-align: center;
-      }
+p {
+  margin-bottom: 1em;
+}
 
-      ul {
-        list-style-type: disc;
-        margin: 20px;
-        padding: 0;
-      }
+/* Colors */
+.primary-bg {
+  background-color: #3498db;
+}
 
-      markdown {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-      }
+.secondary-bg {
+  background-color: #2ecc71;
+}
+
+.text-light {
+  color: #ecf0f1;
+}
+
+/* Buttons */
+.button {
+  background-color: #2980b9;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.button:hover {
+  background-color: #1abc9c;
+}
+
+/* Layout */
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col {
+  flex: 1;
+  padding: 10px;
+}
+
+/* Lists */
+ul {
+  list-style-type: disc;
+  margin: 20px;
+  padding: 0;
+}
+
+.numbered-list {
+  counter-reset: list-counter;
+  list-style: none;
+  padding-left: 20px;
+}
+
+.numbered-list li {
+  counter-increment: list-counter;
+  margin-bottom: 5px;
+}
+
+.numbered-list li::before {
+  content: "(" counter(list-counter, decimal) ") ";
+  font-weight: normal;
+  margin-right: 5px;
+}
+
+.alphabet-list {
+  counter-reset: list-counter;
+  list-style: none;
+  padding-left: auto;
+  margin-top: 0;
+}
+
+.alphabet-list li {
+  counter-increment: list-counter;
+  margin-bottom: 5px;
+}
+
+.alphabet-list li::before {
+  content: "(" counter(list-counter, lower-alpha) ") ";
+  font-weight: normal;
+  margin-right: auto;
+}
+
+.roman-list {
+  counter-reset: list-counter;
+  list-style: none;
+  padding-left: 25px;
+}
+
+.roman-list li {
+  counter-increment: list-counter;
+  margin-bottom: 5px;
+}
+
+.roman-list li::before {
+  content: "(" counter(list-counter, lower-roman) ") ";
+  font-weight: normal;
+  margin-right: 5px;
+}
+
+.bullet-list {
+  counter-reset: list-counter;
+  padding-left: 35px;
+  list-style: disc;
+}
+
+.bullet-list li {
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+
+/* Spacing Elements */
+.centered-container {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.underline {
+  border-bottom: 1px solid black;
+  display: inline-block;
+}
+
+.smaller {
+  display: block;
+  height: 25px;
+  width: 100%;
+}
+
+.small {
+  display: block;
+  height: 50px; /* Smaller Spacer Height */
+  width: 100%;
+}
+
+.normal {
+  display: block;
+  height: 100px; /* Default height */
+  width: 100%;
+}
+
+.large {
+  display: block;
+  height: 200px; /* Different height for this specific spacer */
+  width: 100%;
+}
+
+/* Miscellaneous */
+.hidden {
+  display: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.border {
+  border: 1px solid #ccc;
+}
+
+/* Disclaimer Box */
+.disclaimer-box {
+  background-color: rgba(255, 208, 0, 0.585);
+  padding: 15px;
+  text-align: center;
+  position: relative;
+  top: 0;
+  width: 100%;
+}
