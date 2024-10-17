@@ -4,7 +4,7 @@ Welcome to my IAM and Automation portfolio! Below, you’ll find a collection of
 
 ## Featured Projects
 - [RBAC Implementation](RBAC/rbac-okta.md)
-- [Zero Trust Policies](Zero_Trust/zero-trust.mdzero-trust.md)
+- [Zero Trust Policies](Zero_Trust/zero-trust.md)
 - [Automation Workflows with APIs](Workflow_Automation/automation.md)
 
 ## Contact Me  
