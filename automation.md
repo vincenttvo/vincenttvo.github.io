@@ -17,6 +17,7 @@ Created Workato workflows to automate manual tasks.
 
 Employee Offboarding Workflow
 - This addresses different triggers and if statements in order to catch different scenarios in this specific environment.
+
 ![Employee Offboarding Workato](Images/workato-employee-offboarding.png)
 
 
