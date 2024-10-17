@@ -37,7 +37,7 @@ Okta RBAC Configurations
 - Kandji Assignment Mapping (Blueprint)
     - Used assignment mapping for devices to install or separate tools and software based on role and department.
 
-![Kandji Assignment Map](Images_rbac/kandji-assignment-map.png)
+![Kandji Assignment Map](Images_RBAC/kandji-assignment-map.png)
 
 ## Outcomes
 - Reduced provisioning time by 50%.
