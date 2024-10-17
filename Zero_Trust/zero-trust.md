@@ -21,7 +21,8 @@ Design and Implement Zero Trust models for the organization.
 - Disabled the ability to use windows machine to log onto company systems.
 
 ## Screenshots
-**Zero Trust Configurations:**
+
+### Zero Trust Configurations:
 
 **Network Zones**
 - Created network zones to allow access from trusted areas.

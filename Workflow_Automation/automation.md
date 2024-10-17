@@ -19,7 +19,8 @@ Created Workato workflows to automate manual tasks.
 - Automated data transformation and storage.
 
 ## Screenshots
-**Automation Workflows using Workato:**
+
+### Automation Workflows using Workato:
 
 **Employee Offboarding**
 - This addresses different triggers and if statements in order to catch different scenarios in this specific environment. Removes access tokens and moves user to _ARCHIVE OU in Google to ensure oauth apps are removed.
