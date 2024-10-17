@@ -16,19 +16,19 @@ Okta RBAC Configurations
 - Okta RBAC Groups
     - Roles and Departments Sample
 
-![Okta RBAC Groups](venh-vo.github.io/Images/rbac-okta-groups.png)
+![Okta RBAC Groups](Images_RBAC/rbac-okta-groups.png)
 
-![Okta RBAC Dept Groups](venh-vo.github.io/Images/rbac-okta-dept-groups.png)
+![Okta RBAC Dept Groups](Images_RBAC/rbac-okta-dept-groups.png)
 
 - Okta Group Rules
     - Sample list of groups made with the role in mind.
 
-![Okta RBAC Group Rules](venh-vo.github.io/Images/rbac-okta-group-rules.png)
+![Okta RBAC Group Rules](Images_RBAC/rbac-okta-group-rules.png)
 
 - Okta Group Rule Sample Details
     - This image shows the rule using the user attribute of their title to add to this group.
 
-![Okta RBAC Group Rule Details](venh-vo.github.io/Images/rbac-okta-group-rule-details.png)
+![Okta RBAC Group Rule Details](Images_RBAC/rbac-okta-group-rule-details.png)
 
 ## Outcomes
 - Reduced provisioning time by 50%.
