@@ -1,0 +1,17 @@
+
+      body {
+        background-color: whitesmoke;
+        font-family: Arial, sans-serif;
+      }
+
+      h1 {
+        color: navy;
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+
+      ul {
+        list-style-type: disc;
+        margin: 20px;
+        padding: 0;
+      }
