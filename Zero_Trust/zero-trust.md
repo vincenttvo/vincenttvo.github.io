@@ -23,18 +23,18 @@ Design and Implement Zero Trust models for the organization.
 ## Screenshots
 **Zero Trust Configurations:**
 
-- Network Zones
-    - Created network zones to allow access from trusted areas.
+**Network Zones**
+- Created network zones to allow access from trusted areas.
 
 ![Okta Network Zones](Images_Zero_Trust/okta-network-zones.png)
 
-- Adaptive MFA Okta Policies
-    - Created adaptive MFA policies based on user location, device, and role (ie. Employee, third-party, contractor)
+**Adaptive MFA Okta Policies**
+- Created adaptive MFA policies based on user location, device, and role (ie. Employee, third-party, contractor)
 
 ![Okta Adaptive MFA Policies](Images_Zero_Trust/okta-adaptive-mfa-auth-policies.png)
 
-- Configured Okta and Kandji to deploy certificate to endpoints to be managed devices using Okta Verify.
-    - This allowed devices to authenticate and verify they are in possession of the machine.
+**Configured Okta and Kandji to deploy certificate to endpoints to be managed devices using Okta Verify**
+- This allowed devices to authenticate and verify they are in possession of the machine.
 
 ![Kandji and Okta Device Trust](Images_Zero_Trust/kandji-okta-device-trust.png)
 
