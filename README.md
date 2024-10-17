@@ -1,6 +1,6 @@
 # Cloud Security & IAM Portfolio - Vincent Vo
 
-Welcome to my IAM and Automation portfolio! Below, you’ll find a collection of projects demonstrating my expertise in identity management, Zero Trust, RBAC, and automation using Okta and Workato.
+Welcome to my IAM and Automation portfolio! Below, you’ll find a collection of projects demonstrating my expertise in identity management, Zero Trust, RBAC, and Automation and more.
 
 ## Featured Projects
 - [RBAC Implementation](RBAC/rbac-okta.md)
