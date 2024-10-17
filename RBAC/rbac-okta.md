@@ -12,15 +12,13 @@ Implemented role-based access control (RBAC) using Okta to reduce provisioning t
 
 ## Challenges and Solutions
 **Challenge:** 
-
 - Inconsistent role definitions across departments.
 
 **Solution:** 
 - Worked with stakeholders to align roles with Okta groups and implemented automation.
 
 ## Screenshots
-**Okta RBAC Configurations**
-
+**Okta RBAC Configurations:**
 - Okta RBAC Groups
     - Roles and Departments Sample
 
