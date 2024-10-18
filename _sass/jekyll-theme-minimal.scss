@@ -56,8 +56,12 @@ a:hover small {
 }
 
 .wrapper {
-  max-width:100%;
+  max-width:800px;
   margin:0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
 }
 
 blockquote {
@@ -217,7 +221,7 @@ footer {
 @media print, screen and (max-width: 960px) {
 
   div.wrapper {
-    max-width:100%;
+    width:auto;
     margin:0;
   }
 
