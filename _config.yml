@@ -1,13 +1,13 @@
 title: Vincent Vo
-
-description: 
-  IT Systems Administrator with expertise in Identity and Access Management (IAM), Zero Trust Architecture, and
-  SaaS security. Proven success in automating user lifecycle management using API integrations, REST APIs, and
-  low-code platforms like Workato, enabling scalable event-driven automation. Skilled in adaptive MFA, network
-  segmentation, and SAML/OAuth SSO implementation to enforce secure access. Strong collaborator, supporting
-  SOC2, ISO27001, and SOX compliance efforts. Passionate about emerging trends in passwordless
-  authentication and cloud governance.
-
-theme: jekyll-theme-minimal
-url: "https://venh-vo.github.io"
-markdown: kramdown
+logo: "/Images/main_logo.jpg?raw=true" # your photo (or logo) here
+description: > # your text below (remove <br> elements if you don't need line breaks)
+  IT Systems Administrator
+  <br><br>
+  IAM Advocate
+  <br><br>
+  <a href="https://www.linkedin.com/in/vovincent12/">My LinkedIn Profile</a> 
+  
+remote_theme: pages-themes/minimal@v0.2.0
+plugins:
+- jekyll-remote-theme
+# google_analytics: UA-000000-0 # your Google Analytics tracking ID here
