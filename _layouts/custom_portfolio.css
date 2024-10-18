@@ -1,0 +1,33 @@
+/* custom.css */
+
+/* Remove default body margins and set full width */
+body {
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+    width: 100vw; /* Set width to full viewport width */
+    height: 100vh; /* Set height to full viewport height */
+    overflow: hidden; /* Prevent scrolling */
+}
+
+/* Ensure main content area is full screen */
+.main {
+    width: 100%;
+    height: 100%;
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+}
+
+/* Optional: Adjust header and footer to fit full screen */
+header, footer {
+    width: 100%; /* Full width */
+    position: absolute; /* Absolute positioning for full screen */
+}
+
+header {
+    top: 0; /* Position at the top */
+}
+
+footer {
+    bottom: 0; /* Position at the bottom */
+}
