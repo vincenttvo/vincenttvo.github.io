@@ -1,17 +1,20 @@
-logo: "/Images/main_logo.jpg?raw=true" # your photo (or logo) here
-title: Vincent Vo
-description: > # your text below (remove <br> elements if you don't need line breaks)
+title: <p align="center"> Vincent Vo </p>
+
+logo: "/images/picture.png?raw=true"
+
+description:
+  <p align="center">
+  <a href="pdf/resume.pdf">Resume</a> |
+  <a href="https://www.linkedin.com/in/vovincent12/">LinkedIn</a> |
+  <a href="https://github.com/venh-vo">GitHub</a>
+  </p>
+  
+  <p align="justify">
   IT Systems Administrator
   <br><br>
   IAM Advocate
   <br><br>
-  <a href="https://www.linkedin.com/in/vovincent12/">LinkedIn</a> 
+  </p>
   
-remote_theme: pages-themes/minimal@v0.2.0
-plugins:
-- jekyll-remote-theme
-# google_analytics: UA-000000-0 # your Google Analytics tracking ID here
-
-assets:
-  css:
-    - /_assets/css/custom_portfolio.css
+theme: jekyll-theme-minimal
+# google_analytics: UA-145578661-1 # Google Analytics tracking ID
