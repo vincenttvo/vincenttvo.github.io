@@ -56,12 +56,8 @@ a:hover small {
 }
 
 .wrapper {
-  max-width:800px;
+  max-width:100%;
   margin:0 auto;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  padding: 20px;
 }
 
 blockquote {
@@ -194,7 +190,12 @@ strong {
 }
 
 section {
-  max-width:100%;
+  max-width:800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   float:right;
   padding-bottom:50px;
 }
