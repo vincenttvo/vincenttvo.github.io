@@ -10,5 +10,3 @@ Welcome to my IAM and Automation portfolio! Below, you’ll find a collection of
 ## Other Projects
 - [Website Updates using HTML/CSS](HTML_CSS/html_css.md)
 
-## Contact Me  
-Feel free to reach out via [LinkedIn](https://linkedin.com/in/vovincent12).
