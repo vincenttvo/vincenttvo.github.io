@@ -127,9 +127,13 @@ kbd {
 header {
   width: 270px;
   float:left;
-  align-items: left;
+  top: 0;
+  left: 0;
+  align-items: flex-start;
   flex-direction: column;
   position:fixed;
+  height: 100vh;
+  overflow-y: auto;
   -webkit-font-smoothing:subpixel-antialiased;
 }
 
@@ -194,8 +198,8 @@ strong {
 }
 
 section {
-  max-width:1200px;
-  margin: 0 auto;
+  max-width: 100%;
+  margin-left: 270px;
   display: flex;
   justify-content: center;
   align-items: left;
