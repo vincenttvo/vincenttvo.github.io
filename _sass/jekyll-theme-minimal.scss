@@ -106,6 +106,8 @@ img {
 
 .logo {
   max-width:100%;
+  height: auto;
+  margin-bottom: 20px;
 }
 
 kbd {
@@ -194,7 +196,7 @@ section {
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  align-items: left;
+  align-items: center;
   flex-direction: column;
   float:center;
   padding-bottom:50px;
