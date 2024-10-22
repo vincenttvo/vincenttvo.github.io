@@ -127,6 +127,8 @@ kbd {
 header {
   width: 270px;
   float:left;
+  align-items: left;
+  flex-direction: column;
   position:fixed;
   -webkit-font-smoothing:subpixel-antialiased;
 }
@@ -196,7 +198,7 @@ section {
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: left;
   flex-direction: column;
   float:center;
   padding-bottom:50px;
