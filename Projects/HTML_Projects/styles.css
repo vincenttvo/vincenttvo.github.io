@@ -187,3 +187,15 @@ ul {
   top: 0;
   width: 100%;
 }
+
+/* Button */
+.custom-button {
+  background-color: lightskyblue;
+  color: white;
+  border-radius: 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: auto;
+  cursor: pointer;  
+}
