@@ -127,7 +127,7 @@ kbd {
 header {
   width: 150px;
   float:left;
-  align-items: flex-start;
+  align-items: left;
   flex-direction: column;
   position:fixed;
   height: 100vh;
@@ -197,7 +197,7 @@ strong {
 
 section {
   max-width: 100%;
-  margin-left: 500px;
+  margin-left: 250px;
   display: flex;
   justify-content: center;
   align-items: left;
