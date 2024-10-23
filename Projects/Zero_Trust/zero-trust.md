@@ -20,6 +20,9 @@ Design and Implement Zero Trust models for the organization.
 - Deployed Okta and Kandji Device trust onto devices to insist users to use their work machines. 
 - Disabled the ability to use windows machine to log onto company systems.
 
+**Conclusion**
+- Being a company that was fully remote and using all SaaS products. Implementing Zero-Trust models was a key effort in order to secure the business users and endpoints. Overall the implementation with the tools we already had such as Kandji and Okta was seamless. Allowing for us to install Okta Verify on user endpoints that enabled biometrics (passwordless authentication). Using Okta as the main directory source and access point for business systems, implementation of authentication, network, and adaptive MFA policies was imperative. Overall, this allowed users to have less passwords to worry about when logging in, reducing risk, and better logging and monitoring of access via Okta logs due to the policies. 
+
 ## Screenshots
 
 ### Zero Trust Configurations:
