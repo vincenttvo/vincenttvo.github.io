@@ -4,7 +4,7 @@ logo: "/Images/main_logo.jpg?raw=true"
 
 description:
 
-  <p align="left" style="white-space:nowrap">
+  <p align="left" style="white-space:nowrap; padding-top:5px;">
   IT Systems Administrator
   <br>
   IAM Advocate
