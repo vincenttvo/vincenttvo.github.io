@@ -4,7 +4,7 @@ logo: "/Images/main_logo.jpg?raw=true"
 
 description:
 
-  <p align="left" style="white-space:nowrap; padding-top:5px;">
+  <p align="left">
   IT Systems Administrator
   <br>
   IAM Advocate
@@ -12,12 +12,12 @@ description:
   </p>
 
   <p>
-  <a href="https://www.linkedin.com/in/vovincent12/" target="_blank" style="text-decoration:underline; display:inline-flex; align-items:center; gap:5px;">
+  <a href="https://www.linkedin.com/in/vovincent12/" target="_blank" style="display:inline-flex; align-items:center; gap:5px;">
     <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" 
       alt=LinkedIn Icon" style="width:16px; height:16px;">
       LinkedIn</a>
   <br>
-  <a href="https://github.com/venh-vo" target="_blank" style="text-decoration:underline; display:inline-flex; align-items:center; gap:5px;">
+  <a href="https://github.com/venh-vo" target="_blank" style="display:inline-flex; align-items:center; gap:5px;">
     <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" 
       alt="Github Icon" style="width:16px; height:16px">
     GitHub</a>
