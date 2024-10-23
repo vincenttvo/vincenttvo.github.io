@@ -4,15 +4,14 @@ logo: "/Images/main_logo.jpg?raw=true"
 
 description:
 
-  <p align="left">
+  <p align="left" style="margin-bottom:10px;">
   IT Systems Administrator
-  <br>
   <br>
   IAM Advocate
   <br>
   </p>
 
-  <p>
+  <p style="margin-top:10px">
   <a href="https://www.linkedin.com/in/vovincent12/" target="_blank" style="display:inline-flex; align-items:center; gap:5px;">
     <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" 
       alt=LinkedIn Icon" style="width:16px; height:16px;">
