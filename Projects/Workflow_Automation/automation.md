@@ -18,6 +18,9 @@ Created Workato workflows to automate manual tasks.
 - Automated parts of the employee offboarding.
 - Automated data transformation and storage.
 
+**Conclusion**
+- Implementing a low-code solution tool or IPaaS such as Workato allowed for automating tasks that would otherwise be complex or time consuming. The tool was multipurpose allowing for automating onboarding and offboarding tasks that were not already natively integrated interactions (i.e Okta deactivation triggers removal of users in integrated apps in Okta that supported provisioning). Other use cases have been to automate data transformation such as downloading hundreds of Gong calls via their URLs and importing them into Google Drive. This allowed us to archive old calls to free up space and have historical data if need be for the team that needed it. Automation was key in completing tasks quickly and efficiently minimizing the time spent doing them manually, allowing the IT team to be lean.
+
 ## Screenshots
 
 ### Automation Workflows using Workato:
