@@ -41,7 +41,8 @@ a {
 
 a:hover, a:focus {
   color: rgba(0, 255, 213, 0.753);
-  font-weight: bold;
+  text-decoration: underline;
+  transition: 0.5s;
 }
 
 a small {
