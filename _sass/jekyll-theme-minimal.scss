@@ -126,13 +126,14 @@ kbd {
 }
 
 header {
-  width: 150px;
+  width: 175px;
   float:left;
   align-items: left;
   display: flex;
   flex-direction: column;
   position:fixed;
   height: 100vh;
+  overflow-y: auto;
   -webkit-font-smoothing:subpixel-antialiased;
 }
 
