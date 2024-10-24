@@ -1,4 +1,4 @@
-# RBAC Implementation with Okta
+# *RBAC Implementation with Okta*
 
 ## Objective
 Implemented role-based access control (RBAC) using Okta to reduce provisioning time by 50% and enforce least-privilege access.
