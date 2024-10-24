@@ -107,9 +107,11 @@ img {
 
 .logo {
   max-width:100%;
-  height: 300px;
-  width: 300px;
+  height: auto;
+  width: auto;
+  max-height: 200px;
   border-radius: 50%;
+  object-fit: cover;
   margin-bottom: 20px;
 }
 
