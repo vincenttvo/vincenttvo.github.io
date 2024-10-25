@@ -1,4 +1,4 @@
-# *HTML and CSS Projects*
+# *HTML/CSS*
 
 ## Objective
 Update website pages using HTML from Text Editors with Wordpress.
