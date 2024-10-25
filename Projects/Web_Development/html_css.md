@@ -20,8 +20,6 @@ Update website pages using HTML from Text Editors with Wordpress.
 
 ## Screenshots
 
-### HTML and CSS
-
 - Sample Image of some of the CSS styles used to make the update.
 
 ![CSS Samples](Images_HTML_CSS/company_msa_update_css.png)
