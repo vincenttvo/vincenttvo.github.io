@@ -10,5 +10,5 @@
 ## Automation
 - [Automation Workflows](Projects/Workflow_Automation/automation.md)
 
-## HTML
-- [Website Updates using HTML/CSS](Projects/HTML_Projects/html_css.md)
+## Web Development
+- [Website Updates using HTML/CSS](Projects/Web_Development/html_css.md)
