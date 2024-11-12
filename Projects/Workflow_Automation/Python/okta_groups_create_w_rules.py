@@ -65,7 +65,7 @@ def create_group(group_name, group_description, okta_api_token, okta_company_dom
     # Set up headers
     headers = set_headers(okta_api_token)
 
-    while url:
+    while True:
         response = requests.get(url, headers=headers)
         if handle_rate_limit(response):
             continue
@@ -130,36 +130,38 @@ def create_group_rule(group_id, rule_name, condition_filter, okta_api_token, okt
     #print(f"Payload for group rule: {json.dumps(payload, indent=2)}")  # Print out the JSON payload to inspect
     #print(f"Creating group rule with filter: {condition_filter}") # Debugging print
 
-    # Make the API request to create the rule
-    response = requests.post(url, headers=headers, json=payload)
 
-    if handle_rate_limit(response):
-        return
+    while True:
+        # Make the API request to create the rule
+        response = requests.post(url, headers=headers, json=payload)
 
-        # Log the full response for debugging
-        #print(f"Group rule creation response: {response.status_code} - {response.text}")
-
-    if response.status_code in [200, 201]:
-        print(f"Group rule for {rule_name} created successfully.")
-        rule = response.json()
-        rule_id = rule["id"]
-        print(f"Rule created with ID: {rule_id}")
-
-        activate_url = f"https://{okta_company_domain}/api/v1/groups/rules/{rule_id}/lifecycle/activate"
-        activate_response = requests.post(activate_url, headers=headers)
-
-        if handle_rate_limit(activate_response):
+        if handle_rate_limit(response):
             return
 
-        if activate_response.status_code == 204:
-            print(f"Successfully activated the group rule {rule_name}")
-            return rule
+            # Log the full response for debugging
+            #print(f"Group rule creation response: {response.status_code} - {response.text}")
+
+        if response.status_code in [200, 201]:
+            print(f"Group rule for {rule_name} created successfully.")
+            rule = response.json()
+            rule_id = rule["id"]
+            print(f"Rule created with ID: {rule_id}")
+
+            activate_url = f"https://{okta_company_domain}/api/v1/groups/rules/{rule_id}/lifecycle/activate"
+            activate_response = requests.post(activate_url, headers=headers)
+
+            if handle_rate_limit(activate_response):
+                return
+
+            if activate_response.status_code == 204:
+                print(f"Successfully activated the group rule {rule_name}")
+                return rule
+            else:
+                print(f"Failed to activate rule {rule_name}: {activate_response.status_code} - {activate_response.text}")
+                return None
         else:
-            print(f"Failed to activate rule {rule_name}: {activate_response.status_code} - {activate_response.text}")
+            print(f"Failed to create rule: {response.status_code} - {response.text}")
             return None
-    else:
-        print(f"Failed to create rule: {response.status_code} - {response.text}")
-        return None
         
 
 # Create all groups and associated rules
