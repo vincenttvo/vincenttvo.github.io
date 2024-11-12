@@ -9,7 +9,7 @@
 
 ## Automation
 - [Workato Workflows](Projects/Workflow_Automation/Workato/automation.md)
-- [Creating Okta Groups and Rules using Python](Projects/Workflow_Automation/Python/okta_groups_create_w_rules.py)
+- [Creating Okta Groups and Rules using Python](https://github.com/vincenttvo/vincenttvo.github.io/blob/main/Projects/Workflow_Automation/Python/okta_groups_create_w_rules.py)
 
 ## Web Development
 - [Website Updates using HTML/CSS](Projects/Web_Development/html_css.md)
