@@ -2,11 +2,14 @@
 
 import requests
 import subprocess
+import time
+import re
+import json
 
 # Function to retrieve the API key from 1Password vault. Can update to take hardcoded value instead of from 1Password vault
 def okta_api_token():
     result = subprocess.run(
-        ["op", "read", "path-to-op-vault"],
+        ["op", "read", "path-to-op-key"],
         capture_output = True,
         text = True
     )
@@ -19,7 +22,7 @@ def okta_api_token():
 # Function to retrieve the Okta company domain from 1Password vault. Can update to take hardcoded value instead of from 1Password vault
 def okta_company_domain():
     result = subprocess.run(
-        ["op", "read", "path-to-op-vault"],
+        ["op", "read", "path-to-op-key"],
         capture_output = True,
         text = True
     )
@@ -33,6 +36,16 @@ def set_headers(okta_api_token):
         "Content-Type": "application/json"
     }
     return headers
+
+# Function to handle API rate limits in Okta
+def handle_rate_limit(response):
+    if response.status_code == 429: # Rate limit error
+        retry_after = response.headers.get("Retry-After", "300")
+        print(f"Rate limit exceeded. Retrying after {retry_after} seconds...")
+        time.sleep(int(retry_after)) # Sleep before retrying
+        return True
+    return False # No retry needed
+
 
 # Function to auto generate group rule name
 def generate_group_name(role_title):
@@ -51,42 +64,54 @@ def create_group(group_name, group_description, okta_api_token, okta_company_dom
     url = f"https://{okta_company_domain}/api/v1/groups"
     # Set up headers
     headers = set_headers(okta_api_token)
-    search_url = f"https://{okta_company_domain}/api/v1/groups?q={group_name}"
-    search_response = requests.get(search_url, headers=headers)
-    #print(f"Searching for group {group_name}, Status Code: {search_response.status_code}") # Debugging print
 
-    if search_response.status_code == 200:
-        groups = search_response.json()
-        for group in groups:
-            if group["profile"]["name"] == group_name:
-                print(f"Group {group_name} already exists.")
-                return
+    while url:
+        response = requests.get(url, headers=headers)
+        if handle_rate_limit(response):
+            continue
 
-    # Proceed to create group if it does not already exist.
-    payload = {
-        "profile": {
-            "name": group_name,
-            "description": group_description
+        if response.status_code == 200:
+            search_url = f"https://{okta_company_domain}/api/v1/groups?q={group_name}"
+            search_response = requests.get(search_url, headers=headers)
+
+        if handle_rate_limit(response):
+            continue
+
+        if search_response.status_code == 200:
+            groups = search_response.json()
+            for group in groups:
+                if group["profile"]["name"] == group_name:
+                    print(f"Group {group_name} already exists.")
+                    return
+
+        # Proceed to create group if it does not already exist.
+        payload = {
+            "profile": {
+                "name": group_name,
+                "description": group_description
+            }
         }
-    }
-    #print(f"Creating group {group_name} with payload: {json.dumps(payload)}")  # Debugging print
-    response = requests.post(url, headers=headers, json=payload)
+        #print(f"Creating group {group_name} with payload: {json.dumps(payload)}")  # Debugging print
+        response = requests.post(url, headers=headers, json=payload)
 
-    # Log the full response for debugging
-    #print(f"Group creation response: {response.status_code} - {response.text}")
+        if handle_rate_limit(response):
+            continue
 
-    if response.status_code == 200:
-        print(f"Group {group_name} created successfully.")
-        return response.json() # Return the created group details
-    else:
-        print(f"Failed to create group {group_name}: {response.status_code} - {response.text}")
-        return None
+        if response.status_code == 200:
+            print(f"Group {group_name} created successfully.")
+            return response.json() # Return the created group details
+        else:
+            print(f"Failed to create group {group_name}: {response.status_code} - {response.text}")
+            return None
+
+
+        # Log the full response for debugging
+        #print(f"Group creation response: {response.status_code} - {response.text}")
     
 # Function to create a dynamic group rule
 def create_group_rule(group_id, rule_name, condition_filter, okta_api_token, okta_company_domain):
     url = f"https://{okta_company_domain}/api/v1/groups/rules"
     headers = set_headers(okta_api_token)
-
     payload = {
         "type": "group_rule",  # Make sure the type is set to "group_rule"
         "name": rule_name,
@@ -108,8 +133,11 @@ def create_group_rule(group_id, rule_name, condition_filter, okta_api_token, okt
     # Make the API request to create the rule
     response = requests.post(url, headers=headers, json=payload)
 
-    # Log the full response for debugging
-    #print(f"Group rule creation response: {response.status_code} - {response.text}")
+    if handle_rate_limit(response):
+        return
+
+        # Log the full response for debugging
+        #print(f"Group rule creation response: {response.status_code} - {response.text}")
 
     if response.status_code in [200, 201]:
         print(f"Group rule for {rule_name} created successfully.")
@@ -119,6 +147,9 @@ def create_group_rule(group_id, rule_name, condition_filter, okta_api_token, okt
 
         activate_url = f"https://{okta_company_domain}/api/v1/groups/rules/{rule_id}/lifecycle/activate"
         activate_response = requests.post(activate_url, headers=headers)
+
+        if handle_rate_limit(activate_response):
+            return
 
         if activate_response.status_code == 204:
             print(f"Successfully activated the group rule {rule_name}")
@@ -144,7 +175,7 @@ def create_multiple_groups_and_rules(okta_api_token, okta_company_domain, groups
 
         if created_group:
             group_id = created_group.get("id")
-            #print(f"Created Group {group_name} with ID {group_id}") # Debugging print
+            print(f"Created Group {group_name} with ID {group_id}") # Debugging print
 
             # Define the rule condition (e.g, filter by title)
             condition_filter = f"user.title==\"{role_title}\" OR user.title==\"{role_title} I\" OR user.title==\"{role_title} II\" OR user.title==\"{role_title} III\"" # Assuming users's title contains this title
