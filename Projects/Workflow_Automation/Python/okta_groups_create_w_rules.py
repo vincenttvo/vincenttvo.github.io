@@ -65,24 +65,25 @@ def create_group(group_name, group_description, okta_api_token, okta_company_dom
     # Set up headers
     headers = set_headers(okta_api_token)
 
+    retries = 0
     while True:
         response = requests.get(url, headers=headers)
-        if handle_rate_limit(response):
+        if handle_rate_limit(response, retries):
             continue
 
         if response.status_code == 200:
             search_url = f"https://{okta_company_domain}/api/v1/groups?q={group_name}"
             search_response = requests.get(search_url, headers=headers)
 
-        if handle_rate_limit(response):
-            continue
+            if handle_rate_limit(response, retries):
+                continue
 
-        if search_response.status_code == 200:
-            groups = search_response.json()
-            for group in groups:
-                if group["profile"]["name"] == group_name:
-                    print(f"Group {group_name} already exists.")
-                    return
+            if search_response.status_code == 200:
+                groups = search_response.json()
+                for group in groups:
+                    if group["profile"]["name"] == group_name:
+                        print(f"Group {group_name} already exists.")
+                        return
 
         # Proceed to create group if it does not already exist.
         payload = {
@@ -94,7 +95,7 @@ def create_group(group_name, group_description, okta_api_token, okta_company_dom
         #print(f"Creating group {group_name} with payload: {json.dumps(payload)}")  # Debugging print
         response = requests.post(url, headers=headers, json=payload)
 
-        if handle_rate_limit(response):
+        if handle_rate_limit(response, retries):
             continue
 
         if response.status_code == 200:
@@ -130,12 +131,12 @@ def create_group_rule(group_id, rule_name, condition_filter, okta_api_token, okt
     #print(f"Payload for group rule: {json.dumps(payload, indent=2)}")  # Print out the JSON payload to inspect
     #print(f"Creating group rule with filter: {condition_filter}") # Debugging print
 
-
+    retries = 0
     while True:
         # Make the API request to create the rule
         response = requests.post(url, headers=headers, json=payload)
 
-        if handle_rate_limit(response):
+        if handle_rate_limit(response, retries):
             return
 
             # Log the full response for debugging
@@ -150,7 +151,7 @@ def create_group_rule(group_id, rule_name, condition_filter, okta_api_token, okt
             activate_url = f"https://{okta_company_domain}/api/v1/groups/rules/{rule_id}/lifecycle/activate"
             activate_response = requests.post(activate_url, headers=headers)
 
-            if handle_rate_limit(activate_response):
+            if handle_rate_limit(activate_response, retries):
                 return
 
             if activate_response.status_code == 204:
