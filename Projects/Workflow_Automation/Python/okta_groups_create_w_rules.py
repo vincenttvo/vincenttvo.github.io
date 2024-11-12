@@ -75,7 +75,7 @@ def create_group(group_name, group_description, okta_api_token, okta_company_dom
             search_url = f"https://{okta_company_domain}/api/v1/groups?q={group_name}"
             search_response = requests.get(search_url, headers=headers)
 
-            if handle_rate_limit(response, retries):
+            if handle_rate_limit(search_response, retries):
                 continue
 
             if search_response.status_code == 200:
