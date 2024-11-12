@@ -151,7 +151,7 @@ def create_group_rule(group_id, rule_name, condition_filter, okta_api_token, okt
             activate_url = f"https://{okta_company_domain}/api/v1/groups/rules/{rule_id}/lifecycle/activate"
             activate_response = requests.post(activate_url, headers=headers)
 
-            if handle_rate_limit(activate_response, retries):
+            if handle_rate_limit(activate_response):
                 return
 
             if activate_response.status_code == 204:
