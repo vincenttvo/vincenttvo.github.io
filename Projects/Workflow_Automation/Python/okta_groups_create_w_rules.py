@@ -2,7 +2,6 @@
 
 import requests
 import subprocess
-import pandas as pd
 import json
 
 # Function to retrieve the API key from 1Password vault. Can update to take hardcoded value instead of from 1Password vault
@@ -15,6 +14,8 @@ def okta_api_token():
     # Extract and return the API key from the result
     okta_api_token = result.stdout.strip()
     return okta_api_token
+    
+    
 
 # Function to retrieve the Okta company domain from 1Password vault. Can update to take hardcoded value instead of from 1Password vault
 def okta_company_domain():
@@ -26,7 +27,6 @@ def okta_company_domain():
     okta_company_domain = result.stdout.strip()
     return okta_company_domain
 
-# Set up headers
 def set_headers(okta_api_token):
     # Set up headers
     headers = {
@@ -38,13 +38,14 @@ def set_headers(okta_api_token):
 # Function to auto generate group rule name
 def generate_group_name(role_title):
     # Convert the title to lowercase and replace spaced with hypends
-    group_name = f"role-{role_title
-                         .replace(" ", "-")
-                         .replace("&", "and")
-                         .replace(",", "")
-                         .replace("director", "dir")
-                         .replace("manager", "mgr")
-                         .lower()}"
+    group_name = f"{role_title
+                        .replace(" ", "-")
+                        .replace("&", "and")
+                        .replace(",", "")
+                        .replace("director", "dir")
+                        .replace("manager", "mgr")
+                        .lower()
+                    }"
     return group_name
 
 # Function to auto generate group rule name
@@ -54,10 +55,10 @@ def generate_group_description(role_title):
     return group_description
 
 # Function to create a group
-def create_group(okta_api_token, okta_company_domain, group_name, group_description):
+def create_group(group_name, group_description, okta_api_token, okta_company_domain):
     url = f"https://{okta_company_domain}/api/v1/groups"
+    # Set up headers
     headers = set_headers(okta_api_token)
-
     search_url = f"https://{okta_company_domain}/api/v1/groups?q={group_name}"
     search_response = requests.get(search_url, headers=headers)
     #print(f"Searching for group {group_name}, Status Code: {search_response.status_code}") # Debugging print
@@ -96,7 +97,7 @@ def create_group(okta_api_token, okta_company_domain, group_name, group_descript
         return None
     
 # Function to create a dynamic group rule
-def create_group_rule(okta_api_token, okta_company_domain, group_id, rule_name, condition_filter):
+def create_group_rule(group_id, rule_name, condition_filter, okta_api_token, okta_company_domain):
     url = f"https://{okta_company_domain}/api/v1/groups/rules"
     headers = set_headers(okta_api_token)
 
@@ -149,22 +150,9 @@ def create_group_rule(okta_api_token, okta_company_domain, group_id, rule_name, 
         print(f"Failed to create rule: {response.status_code} - {response.text}")
         return None
         
-# Function to read the group data from a CSV file using pandas
-def read_group_data(csv_file_path):
-    df = pd.read_csv(csv_file_path)
-    groups_to_create = []
-
-    for _, row in df.iterrows():
-        group = {
-            "title": row["Title"],
-        }
-        groups_to_create.append(group) # Add the group dictionary to the list
-    return groups_to_create # Return full list after all the rows are processed.
 
 # Create all groups and associated rules
-def create_multiple_groups_and_rules(okta_api_token, okta_company_domain, csv_file_path):
-    groups_to_create = read_group_data(csv_file_path)
-
+def create_multiple_groups_and_rules(okta_api_token, okta_company_domain, groups_to_create):
     for group in groups_to_create:
         role_title = group["title"]
         group_name = generate_group_name(role_title)
@@ -172,27 +160,40 @@ def create_multiple_groups_and_rules(okta_api_token, okta_company_domain, csv_fi
         
 
         # Create group
-        created_group = create_group(okta_api_token, okta_company_domain, group_name, group_description)
+        created_group = create_group(group_name, group_description, okta_api_token, okta_company_domain)
 
         if created_group:
             group_id = created_group.get("id")
             print(f"Created Group {group_name} with ID {group_id}") # Debugging print
 
             # Define the rule condition (e.g, filter by title)
-            condition_filter = f"user.title==\"{role_title}\" OR user.title==\"{role_title} I\" OR user.title==\"{role_title} II\" OR user.title==\"{role_title} III\"" # Assuming users's title contains this title
-
+            condition_filter = f"user.department matchesRegex \"departmentName\"" # Assuming user attribute will be applied across multiple groups. Otherwise make one group and match with one condition filter
+            # title_condition_filter = f"user.title matchesRegex \"^Senior.*\" # This would pick up all titles that start with Senior
+ 
             # Create the rule for the group
             rule_name = f"{group_name}"
-            create_group_rule(okta_api_token, okta_company_domain, group_id, rule_name, condition_filter)
+            create_group_rule(group_id, rule_name, condition_filter, okta_api_token, okta_company_domain)
         else:
-            print(f"Group {group_name} created, but no valid group ID found. Skipping rule creation.")
+            print(f"No valid group ID found. Skipping rule creation.")
 
 # Main function to call to create groups
 def main():
+    # Get the Okta API key from 1Password
     api_token = okta_api_token()
+
+    # Get Okta Company Domain from 1Password
     company_domain = okta_company_domain()
-    csv_file_path = ""
-    create_multiple_groups_and_rules(api_token, company_domain, csv_file_path)
+
+    # Group names and descriptions to create
+    groups_to_create = [
+    {"title": "department_base"}, 
+    {"title": "department_intermediate"},
+    {"title": "department_senior"},
+    {"title": "department_advanced"},
+    {"title": "department_admin"}
+    ]
+
+    create_multiple_groups_and_rules(api_token, company_domain, groups_to_create)
 
 # Call main function
 if __name__ == "__main__":
