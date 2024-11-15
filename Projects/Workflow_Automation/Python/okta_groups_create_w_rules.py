@@ -7,7 +7,7 @@ import json
 # Function to retrieve the API key from 1Password vault. Can update to take hardcoded value instead of from 1Password vault
 def okta_api_token():
     result = subprocess.run(
-        ["op", "read", "op://Employee/Okta API Key/credential"],
+        ["op", "read", "path-to-op-vault"],
         capture_output = True,
         text = True
     )
@@ -20,7 +20,7 @@ def okta_api_token():
 # Function to retrieve the Okta company domain from 1Password vault. Can update to take hardcoded value instead of from 1Password vault
 def okta_company_domain():
     result = subprocess.run(
-        ["op", "read", "op://Employee/Okta API Key/username"],
+        ["op", "read", "path-to-op-vault"],
         capture_output = True,
         text = True
     )
