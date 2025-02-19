@@ -13,7 +13,7 @@ def setup_logging(user_emails):
 
     user_emails = user_emails[0]
     log_file_name = f"{'_'.join([part.title() for part in user_emails.split('@')[0].split('.')]).lower().strip()}"
-    log_file_path = f"/Users/vincentvo/Downloads/{log_file_name}_revoke_access_token_log.log"
+    log_file_path = f"path/{log_file_name}_revoke_access_token_log.log"
 
     file_handler = logging.FileHandler(log_file_path)
     stream_handler = logging.StreamHandler()
@@ -48,14 +48,14 @@ def authenticate_service_account(service_account_file, scopes, domain):
         service_account_info, scopes=scopes
     )
     # Delegate domain-wide authority (impersonate an admin user)
-    credentials = credentials.with_subject(f"vincent.vo-sa@{domain}")
+    credentials = credentials.with_subject(f"gsuiteAdminEmail@{domain}")
     directory_service = build("admin", "directory_v1", credentials=credentials)
     groupsettings_service = build("groupssettings", "v1", credentials=credentials)
     return directory_service, groupsettings_service
 
 def read_service_account_file():
     result = subprocess.run(
-        ["op", "read", "op://IT-PRIVILEGED-SECRETS/Google Suite API Key Service Account/quick-geography-441516-f2-c6b6a8fa8b17.json"],
+        ["op", "read", "op://path-to-service-account-json"],
         capture_output = True,
         text = True
         )
