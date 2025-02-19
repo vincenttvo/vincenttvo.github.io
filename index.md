@@ -9,13 +9,13 @@
 
 ## Automation
 ### Okta
-- [Creating Okta Groups and Rules](https://vincenttvo.github.io/Projects/Workflow_Automation/Python/okta_groups_create_w_rules.py)
-- [Create CSV Export of User App Access in Okta](https://vincenttvo.github.io/Projects/Workflow_Automation/Python/okta_user_app_access_csv.py)
-- [Okta App Assignment to Another Group](https://vincenttvo.github.io/Projects/Workflow_Automation/Python/okta_assign_copied_apps_to_group.py)
+- [Creating Okta Groups and Rules](https://github.com/vincenttvo/vincenttvo.github.io/blob/main/Projects/Workflow_Automation/Python/okta_groups_create_w_rules.py)
+- [Create CSV Export of User App Access in Okta](https://github.com/vincenttvo/vincenttvo.github.io/blob/main/Projects/Workflow_Automation/Python/okta_user_app_access_csv.py)
+- [Okta App Assignment to Another Group](https://github.com/vincenttvo/vincenttvo.github.io/blob/main/Projects/Workflow_Automation/Python/okta_assign_copied_apps_to_group.py)
 
 ### GSuite/GAM
-- [Gsuite Revoke User Access Tokens](https://vincenttvo.github.io/Projects/Workflow_Automation/Python/gsuite_revoke_user_access_tokens.py)
-- [GAM Create Google Group w/ Settings](https://vincenttvo.github.io/Projects/Workflow_Automation/Python/gam_create_group_w_settings.py)
+- [Gsuite Revoke User Access Tokens](https://github.com/vincenttvo/vincenttvo.github.io/blob/main/Projects/Workflow_Automation/Python/gsuite_revoke_user_access_tokens.py)
+- [GAM Create Google Group w/ Settings](https://github.com/vincenttvo/vincenttvo.github.io/blob/main/Projects/Workflow_Automation/Python/gam_create_group_w_settings.py)
 
 ### Workato
 - [Workato Workflows](Projects/Workflow_Automation/Workato/automation.md)
