@@ -18,7 +18,7 @@
 - [GAM Create Google Group w/ Settings](https://github.com/vincenttvo/vincenttvo.github.io/blob/main/Projects/Workflow_Automation/Python/gam_create_group_w_settings.py)
 
 ### Workato
-- [Workato Workflows](Projects/Workflow_Automation/Workato/automation.md)
+- [Employee Offboarding](Projects/Workflow_Automation/Workato/automation.md###employee-offboarding)
 
 ## Web Development
 - [Website Updates using HTML/CSS](Projects/Web_Development/html_css.md)
