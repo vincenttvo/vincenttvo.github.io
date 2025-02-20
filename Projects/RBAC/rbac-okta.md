@@ -1,6 +1,6 @@
 # *RBAC Implementation with Okta*
 
-## Objective
+## Overview
 Implemented role-based access control (RBAC) using Okta to reduce provisioning time by 50% and enforce least-privilege access.
 
 ## Implementation Details
@@ -25,24 +25,24 @@ Implemented role-based access control (RBAC) using Okta to reduce provisioning t
 
 ## Screenshots
 
-**Okta RBAC Groups**
+### Okta RBAC Groups
 - Roles and Departments Sample
 
 ![Okta RBAC Groups](Images_RBAC/rbac-okta-groups.png)
 
 ![Okta RBAC Dept Groups](Images_RBAC/rbac-okta-dept-groups.png)
 
-**Okta Group Rules**
+### Okta Group Rules
 - Sample list of groups made with the role in mind.
 
 ![Okta RBAC Group Rules](Images_RBAC/rbac-okta-group-rules.png)
 
-**Okta Group Rule Sample Details**
+### Okta Group Rule Sample Details
 - This image shows the rule using the user attribute of their title to add to this group.
 
 ![Okta RBAC Group Rule Details](Images_RBAC/rbac-okta-group-rule-details.png)
 
-**Kandji Assignment Mapping (Blueprint)**
+### Kandji Assignment Mapping (Blueprint)
 - Used assignment mapping for devices to install or separate tools and software based on role and department.
 
 ![Kandji Assignment Map](Images_RBAC/kandji-assignment-map.png)

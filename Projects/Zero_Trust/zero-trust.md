@@ -1,6 +1,6 @@
 # *Zero Trust Policies and Models*
 
-## Objective
+## Overview
 Design and Implement Zero Trust models for the organization.
 
 ## Implementation Details
