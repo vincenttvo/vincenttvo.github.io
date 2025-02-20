@@ -13,13 +13,13 @@
 
 ## Automation
 ### Okta
-[**Overview**](Projects/Workflow_Automation/Workato/okta-automation.md#overview)
-- [Creating Okta Groups and Rules](Projects/Workflow_Automation/Python/okta-automation/okta_groups_create_w_rules.py)
-- [Create CSV Export of User App Access in Okta](Projects/Workflow_Automation/Python/okta-automation/okta_user_app_access_csv.py)
-- [Okta App Assignment to Another Group](Projects/Workflow_Automation/Python/okta-automation/okta_assign_copied_apps_to_group.py)
+[**Overview**](Projects/Workflow_Automation/Python/okta-automation/okta-automation.md#okta-automation)
+- [Creating Okta Groups and Rules](Projects/Workflow_Automation/Python/okta-autoamtion/okta-automation.md#create-okta-groups)
+- [Create CSV Export of User App Access in Okta](Projects/Workflow_Automation/Python/okta-autoamtion/okta-automation.md#create-app-assignment-csv-report)
+- [Okta App Assignment to Another Group](Projects/Workflow_Automation/Python/okta-autoamtion/okta-automation.md#copy-okta-app-assignment)
 
 ### GSuite/GAM
-[**Overview**](Projects/Workflow_Automation/Workato/gsuite-gam-automation.md#overview)
+[**Overview**](Projects/Workflow_Automation/Python/gsuite-gam-automation/gsuite-gam-automation.md#overview)
 - [Gsuite Revoke User Access Tokens](Projects/Workflow_Automation/Python/gsuite-gam-automation/gsuite-gam-automation.md#revoke-google-user-access-tokens)
 - [GAM Create Google Group w/ Settings](Projects/Workflow_Automation/Python/gsuite-gam-automation/gsuite-gam-automation.md#create-google-groups-with-access-settings-using-gam)
 
@@ -30,5 +30,5 @@
 - [Rename Slack Channels](Projects/Workflow_Automation/Workato/workato-automation.md#rename-slack-channels)
 
 ## Web Development
-[**Overview**]()
+[**Overview IN PROGRESS**]()
 - [Website Updates using HTML/CSS](Projects/Web_Development/html_css.md)

@@ -1,4 +1,4 @@
-# *Automation workflows with Workato*
+# *Okta Automation*
 
 ## Overview
 Created Okta Scripts using Okta API to automate administrative tasks in Okta.
