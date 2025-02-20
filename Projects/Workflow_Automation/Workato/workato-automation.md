@@ -1,6 +1,6 @@
 # *Automation workflows with Workato*
 
-## Objective
+## Overview
 Created Workato workflows to automate manual tasks.
 
 ## Implementation Details
