@@ -1,4 +1,4 @@
-# *Zero Trust Policies and Models*
+# *Zero Trust Policies*
 
 ## Overview
 Design and Implement Zero Trust models for the organization.

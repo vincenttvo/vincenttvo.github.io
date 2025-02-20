@@ -4,11 +4,11 @@
 
 ## Identity and Access Management (IAM) & Security
 ### RBAC
-[**Overview**](Projects/RBAC/rbac-okta.md#overview)
+[**Overview**](Projects/RBAC/rbac-okta.md#rbac-implementation-with-okta)
 - [RBAC](Projects/RBAC/rbac-okta.md#screenshots)
 
 ### Zero Trust
-[**Overview**](Projects/RBAC/zero-trust.md#overview)
+[**Overview**](Projects/RBAC/zero-trust.md#zero-trust-policies)
 - [Zero Trust Policies](Projects/Zero_Trust/zero-trust.md#screenshots)
 
 ## Automation
@@ -19,12 +19,12 @@
 - [Okta App Assignment to Another Group](Projects/Workflow_Automation/Python/okta-autoamtion/okta-automation.md#copy-okta-app-assignment)
 
 ### GSuite/GAM
-[**Overview**](Projects/Workflow_Automation/Python/gsuite-gam-automation/gsuite-gam-automation.md#overview)
+[**Overview**](Projects/Workflow_Automation/Python/gsuite-gam-automation/gsuite-gam-automation.md#automation-workflows-with-gsuite-or-gam)
 - [Gsuite Revoke User Access Tokens](Projects/Workflow_Automation/Python/gsuite-gam-automation/gsuite-gam-automation.md#revoke-google-user-access-tokens)
 - [GAM Create Google Group w/ Settings](Projects/Workflow_Automation/Python/gsuite-gam-automation/gsuite-gam-automation.md#create-google-groups-with-access-settings-using-gam)
 
 ### Workato
-[**Overview**](Projects/Workflow_Automation/Workato/workato-automation.md#overview)
+[**Overview**](Projects/Workflow_Automation/Workato/workato-automation.md#automation-workflows-with-workato)
 - [Employee Offboarding](Projects/Workflow_Automation/Workato/workato-automation.md#employee-offboarding)
 - [Create Slack Channels from Jira Service Desk Request](Projects/Workflow_Automation/Workato/workato-automation.md#create-slack-channels-from-jira-service-desk-request)
 - [Rename Slack Channels](Projects/Workflow_Automation/Workato/workato-automation.md#rename-slack-channels)
