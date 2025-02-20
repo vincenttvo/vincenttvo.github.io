@@ -13,7 +13,7 @@
 
 ## Automation
 ### Okta
-[**Overview**](Projects/Workflow_Automation/Python/okta-automation/okta-automation.md#okta-automation)
+[**Overview**](Projects/Workflow_Automation/Python/okta-autoamtion/okta-automation.md#okta-automation)
 - [Creating Okta Groups and Rules](Projects/Workflow_Automation/Python/okta-autoamtion/okta-automation.md#create-okta-groups)
 - [Create CSV Export of User App Access in Okta](Projects/Workflow_Automation/Python/okta-autoamtion/okta-automation.md#create-app-assignment-csv-report)
 - [Okta App Assignment to Another Group](Projects/Workflow_Automation/Python/okta-autoamtion/okta-automation.md#copy-okta-app-assignment)
