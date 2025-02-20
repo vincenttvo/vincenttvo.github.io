@@ -13,8 +13,8 @@ description:
   </p>
 
   <p style="margin-top:7.5px;">
-    <a href="vincenttvo.github.io/assets/resume/Vincent_Vo_Resume.pdf" target="_blank" style="display:inline-flex; align-items:center; gap:5px;">
-    <img src="https://cdn-icons-png.flaticon.com/128/9483/9483127.png"
+    <a href="assets/resume/Vincent_Vo_Resume.pdf" target="_blank" style="display:inline-flex; align-items:center; gap:5px;">
+    <img src="https://cdn-icons-png.flaticon.com/128/4470/4470351.png"
       alt="Resume Icon" style="width:16px; height:16px;">
       Resume</a>
   <br>
@@ -29,6 +29,7 @@ description:
     GitHub</a>
   </p>
   
+
 theme: jekyll-theme-minimal
 # google_analytics: UA-145578661-1 # Google Analytics tracking ID
 # <a href="pdf/resume.pdf">Resume</a> |
