@@ -8,7 +8,7 @@
 - [RBAC](Projects/RBAC/rbac-okta.md#screenshots)
 
 ### Zero Trust
-[**Overview**](Projects/RBAC/zero-trust.md#zero-trust-policies)
+[**Overview**](Projects/Zero_Trust/zero-trust.md#zero-trust-policies)
 - [Zero Trust Policies](Projects/Zero_Trust/zero-trust.md#screenshots)
 
 ## Automation
