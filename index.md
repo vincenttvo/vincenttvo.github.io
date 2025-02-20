@@ -18,8 +18,8 @@
 - [GAM Create Google Group w/ Settings](https://github.com/vincenttvo/vincenttvo.github.io/blob/main/Projects/Workflow_Automation/Python/gam_create_group_w_settings.py)
 
 ### Workato
-- [Employee Offboarding](Projects/Workflow_Automation/Workato/automation.md###Employee-Offboarding)
-- [Create Slack Channels from Jira Service Desk Request](Projects/Workflow_Automation/Workato/automation.md###Create-Slack-Channels-from-Jira-Service-Desk-Request)
+- [Employee Offboarding](Projects/Workflow_Automation/Workato/automation.md#employee-offboarding)
+- [Create Slack Channels from Jira Service Desk Request](Projects/Workflow_Automation/Workato/automation.md#create-slack-channels-from-jira-service-desk-request)
 
 ## Web Development
 - [Website Updates using HTML/CSS](Projects/Web_Development/html_css.md)
