@@ -1,55 +1,46 @@
 # *Automation workflows with Workato*
 
 ## Overview
-Created Workato workflows to automate manual tasks.
+Created Okta Scripts using Okta API to automate administrative tasks in Okta.
 
 ## Implementation Details
 **Tools Used:** 
-- Okta, Workato, Google Workspace
+- Okta
 
 **Scope:** 
-- Automate manual tasks using a low-code IPaaS solution such as Workato
+- Automate manual actions using Okta API
 
 ## Challenges and Solutions
 **Challenge:** 
-- Automate manual tasks as much as possible when dealing with data, requests, and employees.
+- Automate manual reptitive tasks that IT needed to support such as creating new Okta groups for roles to provision access.
 
 **Solution:** 
-- Automated parts of the employee offboarding.
-- Automated data transformation and storage.
+- Automated creating new role groups to support RBAC.
+- Created a provisioned CSV for whena user leaves for evidence for audit.
 
 **Conclusion**
-- Implementing a low-code solution tool or IPaaS such as Workato allowed for automating tasks that would otherwise be complex or time consuming. The tool was multipurpose allowing for automating onboarding and offboarding tasks that were not already natively integrated interactions (i.e Okta deactivation triggers removal of users in integrated apps in Okta that supported provisioning). Other use cases have been to automate data transformation such as downloading hundreds of Gong calls via their URLs and importing them into Google Drive. This allowed us to archive old calls to free up space and have historical data if need be for the team that needed it. Automation was key in completing tasks quickly and efficiently minimizing the time spent doing them manually, allowing the IT team to be lean.
+- Implementing the use of Okta API into scripts, created automated repetitive tasks and reduced human error and time it took to create those Okta resources. Creating added efficiency from a minimal IT team.
 
-## Screenshots
+## Link to Scripts
 
-### Employee Offboarding
-- This addresses different triggers and if statements in order to catch different scenarios in this specific environment. Removes access tokens and moves user to _ARCHIVE OU in Google to ensure oauth apps are removed.
+### Create Okta Groups
+- This automated the creation of role groups that were used to support RBAC for the business while also creating the Okta Group rule that would assign users this group by their title.
 
-![Employee Offboarding Workato](Workato_Images/workato-employee-offboarding.png)
+[Create Okta Role Groups](https://github.com/vincenttvo/vincenttvo.github.io/blob/main/Projects/Workflow_Automation/Python/okta-autoamtion/okta_groups_create_w_rules.py)
 
-### Create Slack Channels from Jira Service Desk Request
-- This workflow uses workato to take in the reqeust ID from Jira ticket request and uses that information to create a slack channel and resolve ticket on completion. Error handling included if error occurs.
+### Copy Okta App Assignment
+- This allowed for quick assignment of apps to roles in the Senior or Advanced levels of an existing role. To avoid lack of access for an application that role needed. Permissions not applied just app assignment.
 
-![Create Slack Channels](Workato_Images/automation-create-slack-channels.png)
+[Copy Okta Apps](https://github.com/vincenttvo/vincenttvo.github.io/blob/main/Projects/Workflow_Automation/Python/okta-autoamtion/okta_assign_copied_apps_to_group.py)
 
-### Rename Slack Channels
-- This workflow uses an imported CSV report into Google Sheets, that Workato can read from to read identifiers in specific columns and changes to be made from another.
+### Create App Assignment CSV Report
+- This script was intended to pull an active Okta user's current app assignments prior to deactivation as audit evidence showing their access.
 
-![Rename Slack Channels](Workato_Images/automation-slack-channel-rename.png)
+[Generate Report for Okta App Assignment](https://github.com/vincenttvo/vincenttvo.github.io/blob/main/Projects/Workflow_Automation/Python/okta-autoamtion/okta_user_app_access_csv.py)
 
-### Archive Zoom Calls from a CSV imported into Google Sheets
-- This workflow reads a google sheet that has an imported CSV that was obtained. Reads the CSV for the meeting ID and attributes such as name. Downloads and transforms the output information (title, name, user) for better searchability when downloaded then uploaded to Google drive
-
-![Archive Zoom Call Recordings](Workato_Images/automation-archive-zoom-calls.png)
-
-### Archive Gong calls from CSV imported into Google Sheets
-- This workflow reads a google sheet that has an imported CSV that was obtained. Reads the CSV for necessary unique identifires. Modifies the output (title, user, time) for better searchability when downloaded then uploaded into Google drive.
-
-![Archive Gong Call recordings](Workato_Images/automation-archive-gong-calls.png)
 
 ## Outcomes
 - Reduced manual actions by 50%.
-- Transformed Data to be archived in Google Drive.
+- Enabled efficient user access management.
 - Created scalable solutions to be used again for future projects.
-- Automated level 1 Help Desk taks.
+- Generated evidence for audits.
