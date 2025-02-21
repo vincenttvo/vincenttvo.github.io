@@ -30,5 +30,5 @@
 - [Rename Slack Channels](Projects/Workflow_Automation/Workato/workato-automation.md#rename-slack-channels)
 
 ## Web Development
-[**Overview IN PROGRESS**]()
-- [Website Updates using HTML/CSS](Projects/Web_Development/html_css.md)
+[**Overview**](Projects/Web_Development/web_development.md#web-development)
+- [Website Updates using HTML/CSS](Projects/Web_Development/web_development.md#screenshots)
