@@ -27,7 +27,8 @@
 [**Overview**](Projects/Workflow_Automation/Workato/workato-automation.md#automation-workflows-with-workato)
 - [Employee Offboarding](Projects/Workflow_Automation/Workato/workato-automation.md#employee-offboarding)
 - [Create Slack Channels from Jira Service Desk Request](Projects/Workflow_Automation/Workato/workato-automation.md#create-slack-channels-from-jira-service-desk-request)
-- [Rename Slack Channels](Projects/Workflow_Automation/Workato/workato-automation.md#rename-slack-channels)
+- [Archive Zoom Calls from a CSV imported into Google Sheets](Projects/Workflow_Automation/Workato/workato-automation.md#archive-zoom-calls-from-a-csv-imported-into-google-sheets)
+- [Archive Gong calls from CSV imported into Google Sheets](Projects/Workflow_Automation/Workato/workato-automation.md#archive-gong-calls-from-csv-imported-into-google-sheets)
 
 ## Web Development
 [**Overview**](Projects/Web_Development/web_development.md#web-development)
