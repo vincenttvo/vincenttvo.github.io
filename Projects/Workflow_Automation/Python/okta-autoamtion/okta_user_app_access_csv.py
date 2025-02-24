@@ -9,7 +9,7 @@ import csv
 # Function to retrieve the API key from 1Password vault. Can update to take hardcoded value instead of from 1Password vault
 def okta_api_token():
     result = subprocess.run(
-        ["op", "read", "op://path-to-item"],
+        ["op", "read", "op://op-path-to-vault-item"],
         capture_output = True,
         text = True
     )
@@ -20,7 +20,7 @@ def okta_api_token():
 # Function to retrieve the Okta company domain from 1Password vault. Can update to take hardcoded value instead of from 1Password vault
 def okta_company_domain():
     result = subprocess.run(
-        ["op", "read", "op://path-to-item"],
+        ["op", "read", "op://op-path-to-vault-item"],
         capture_output = True,
         text = True
     )
@@ -51,7 +51,9 @@ def get_user_assigned_apps(okta_api_token, okta_company_domain, user_id):
 
         # Now export this data to a CSV
         # export_to_csv(user_id)
-        return []
+        # print(f"Assigned apps structure for {user_id}: {json.dumps(apps_data, indent=4)}")  # Debugging print
+        print(f'User {user_id} has {len(apps_data)} assigned apps.')
+        return apps_data
     else:
         print(f"Error: {response.status_code}, {response.text}")
         return []
@@ -74,7 +76,11 @@ def get_group_assigned_apps(okta_api_token, okta_company_domain, group_id):
 
     response = requests.get(url, headers=headers)
     if response.status_code == 200:
-        return response.json()
+        apps = response.json()
+        # print(f"Assigned apps structure for {group_id}: {json.dumps(apps, indent=4)}")  # Debugging print
+        # Print the number of applications found for the group
+        print(f"Group {group_id} has {len(apps)} assigned apps.")
+        return apps
     else:
         print(f"Error retrieving apps for group {group_id}: {response.status_code}, {response.text}")
         return []
@@ -97,22 +103,20 @@ def export_to_csv(user_apps, user_id, group_apps):
         # Write the CSV header (field you want to include in the report)
         writer.writerow(["App Name", "App ID", "User Name", "User Email", "Assignment"])
 
-        # Iterate through each app in the list
+        # Iterate through each app in the individual assignment apps list
         for app in user_apps:
-            # Check if app is active
-            if app.get("status", "").upper() == "ACTIVE":
-                # Extract the relevant information from the app dictionary
-                app_name = app["label"]
-                app_id = app.get("id", "N/A")
-                # last_updated = app.get("lastUpdated", "N/A")
-                user_name = f'{" ".join([part.title() for part in user_id.split("@")[0].split(".")])}'
-                user_email = f"{user_id}"
-                # status = app.get("status", "N/A")
-
-                # Write each row to the csv
-                writer.writerow([app_name, app_id, user_name, user_email, "User"])
+            # Extract the relevant information from the app dictionary
+            app_name = app.get('label', 'label not found')
+            app_id = app.get("id", "app id not found")
+            # last_updated = app.get("lastUpdated", "N/A")
+            user_name = f'{" ".join([part.title() for part in user_id.split("@")[0].split(".")])}'
+            user_email = f"{user_id}"
+            # status = app.get("status", "N/A")
+            # Write each row to the csv
+            writer.writerow([app_name, app_id, user_name, user_email, 'Individual'])
         
         # Add group apps to the CSV
+        print(f"Exporting group assigned apps...")  # Debugging line
         for group_id, group_data in group_apps.items():
             group_name = group_data["name"]
             groups_apps_list = group_data["apps"]
@@ -145,7 +149,7 @@ def main():
             "name": group_name, # Store the group name
             "apps": get_group_assigned_apps(api_token, company_domain, group_id)
         }
-
+    
     export_to_csv(user_apps, user_id, group_apps)
 
 if __name__ == "__main__":
