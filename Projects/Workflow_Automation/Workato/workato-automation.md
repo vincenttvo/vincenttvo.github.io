@@ -26,7 +26,8 @@ Created Workato workflows to automate manual tasks.
 ### Employee Offboarding
 - This addresses different triggers and if statements in order to catch different scenarios in this specific environment. Removes access tokens and moves user to _ARCHIVE OU in Google to ensure oauth apps are removed.
 
-![Employee Offboarding Workato](Workato_Images/workato-employee-offboarding.png)
+![Employee Offboarding Workato](Workato_Images/workato-employee-offboarding1.png)
+![Employee Offboarding Workato](Workato_Images/workato-employee-offboarding2.png)
 
 ### Create Slack Channels from Jira Service Desk Request
 - This workflow uses workato to take in the reqeust ID from Jira ticket request and uses that information to create a slack channel and resolve ticket on completion. Error handling included if error occurs.
