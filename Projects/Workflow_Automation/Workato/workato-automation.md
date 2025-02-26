@@ -32,7 +32,11 @@ Created Workato workflows to automate manual tasks.
 ### Create Slack Channels from Jira Service Desk Request
 - This workflow uses workato to take in the reqeust ID from Jira ticket request and uses that information to create a slack channel and resolve ticket on completion. Error handling included if error occurs.
 
-![Create Slack Channels](Workato_Images/automation-create-slack-channels.png)
+![Create Slack Channels](Workato_Images/create_slack_channel1.png)
+![Create Slack Channels](Workato_Images/create_slack_channel2.png)
+![Create Slack Channels](Workato_Images/create_slack_channel3.png)
+![Create Slack Channels](Workato_Images/create_slack_channel4.png)
+![Create Slack Channels](Workato_Images/create_slack_channel5.png)
 
 ### Archive Zoom Calls from a CSV imported into Google Sheets
 - This workflow reads a google sheet that has an imported CSV that was obtained. Reads the CSV for the meeting ID and attributes such as name. Downloads and transforms the output information (title, name, user) for better searchability when downloaded then uploaded to Google drive
