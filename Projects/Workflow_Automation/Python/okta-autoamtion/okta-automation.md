@@ -26,17 +26,17 @@ Created Okta Scripts using Okta API to automate administrative tasks in Okta.
 ### Create Okta Groups
 - This automated the creation of role groups that were used to support RBAC for the business while also creating the Okta Group rule that would assign users this group by their title.
 
-[`**Create Okta Role Groups**`](https://github.com/vincenttvo/vincenttvo.github.io/blob/main/Projects/Workflow_Automation/Python/okta-autoamtion/okta_groups_create_w_rules.py)
+[==**Create Okta Role Groups**==](https://github.com/vincenttvo/vincenttvo.github.io/blob/main/Projects/Workflow_Automation/Python/okta-autoamtion/okta_groups_create_w_rules.py)
 
 ### Copy Okta App Assignment
 - This allowed for quick assignment of apps to roles in the Senior or Advanced levels of an existing role. To avoid lack of access for an application that role needed. Permissions not applied just app assignment.
 
-[`**Copy Okta Apps**`](https://github.com/vincenttvo/vincenttvo.github.io/blob/main/Projects/Workflow_Automation/Python/okta-autoamtion/okta_assign_copied_apps_to_group.py)
+[==**Copy Okta Apps**==](https://github.com/vincenttvo/vincenttvo.github.io/blob/main/Projects/Workflow_Automation/Python/okta-autoamtion/okta_assign_copied_apps_to_group.py)
 
 ### Create App Assignment CSV Report
 - This script was intended to pull an active Okta user's current app assignments prior to deactivation as audit evidence showing their access.
 
-[`**Generate Report for Okta App Assignment**`](https://github.com/vincenttvo/vincenttvo.github.io/blob/main/Projects/Workflow_Automation/Python/okta-autoamtion/okta_user_app_access_csv.py)
+[==**Generate Report for Okta App Assignment**==](https://github.com/vincenttvo/vincenttvo.github.io/blob/main/Projects/Workflow_Automation/Python/okta-autoamtion/okta_user_app_access_csv.py)
 
 
 ## Outcomes
