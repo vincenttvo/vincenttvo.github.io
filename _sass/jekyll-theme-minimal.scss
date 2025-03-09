@@ -142,15 +142,15 @@ kbd {
 
 header {
   width: 200px;
-  /*float:left;*/
+  float:left;
   text-align: center;
   align-items: flex-start;
   display: flex;
-  // flex-direction: row;
-  // position:fixed;
-  // height: 100vh;
-  // overflow-y: auto;
-  // -webkit-font-smoothing:subpixel-antialiased;
+  flex-direction: column;
+  position:fixed;
+  height: 100vh;
+  overflow-y: auto;
+  -webkit-font-smoothing:subpixel-antialiased;
   box-sizing: border-box;
 }
 
@@ -216,11 +216,11 @@ strong {
 
 section {
   max-width: 100%;
-  // margin-left: 500px;
+  margin-left: 500px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  // flex-direction: column;
+  flex-direction: column;
   padding-bottom:50px;
   margin-top: 0;
   box-sizing: border-box;
