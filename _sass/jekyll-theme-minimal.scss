@@ -141,7 +141,7 @@ kbd {
 }
 
 header {
-  width: 100%;
+  width: 200px;
   /*float:left;*/
   text-align: center;
   align-items: flex-start;
@@ -220,7 +220,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  flex-direction: column;
+  // flex-direction: column;
   padding-bottom:50px;
   margin-top: 0;
   box-sizing: border-box;
