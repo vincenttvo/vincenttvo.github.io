@@ -67,8 +67,12 @@ a:hover strong {
 }
 
 .wrapper {
-  max-width:100%;
-  margin:0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  // max-width:100%;
+  // margin:0 auto;
 }
 
 blockquote {
@@ -137,15 +141,17 @@ kbd {
 }
 
 header {
-  width: 200px;
-  float:left;
+  width: 100%;
+  /*float:left;*/
+  text-align: center;
   align-items: flex-start;
   display: flex;
-  flex-direction: row;
-  position:fixed;
-  height: 100vh;
-  overflow-y: auto;
-  -webkit-font-smoothing:subpixel-antialiased;
+  // flex-direction: row;
+  // position:fixed;
+  // height: 100vh;
+  // overflow-y: auto;
+  // -webkit-font-smoothing:subpixel-antialiased;
+  box-sizing: border-box;
 }
 
 ul.downloads {
@@ -210,13 +216,15 @@ strong {
 
 section {
   max-width: 100%;
-  margin-left: 500px;
+  // margin-left: 500px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
   padding-bottom:50px;
   margin-top: 0;
+  box-sizing: border-box;
+  flex-grow: 1;
 }
 
 small {
