@@ -4,7 +4,7 @@ Welcome to my Github Portfolio! :relaxed:
 
 Here you will find clickable links to some examples of work I have done in the respective categorized areas.
 
-These works and have taught me a lot as I had to work on these project or tasks within these tools. I am also proud of these and would like to share! :punch:
+I learned a lot or something new through having to work on these either for a project, initiative, or personal to allow efficiency for my day-to-day. I am also proud of these and would like to share! :punch:
 
 <br>
 
