@@ -8,14 +8,14 @@ from pydantic import EmailStr, field_validator, BaseModel, ValidationError
 class EmailInput(BaseModel):
     email: EmailStr
 
-    # Custom validator to check iof the email ends with a specific domain
+    # Custom validator to check if the email ends with a specific domain
     @field_validator('email')
     def check_email_domain(cls, value):
         # Define the allowed domain e.g. @example.com
-        allowed_domain = '@measurabl.com'
+        allowed_domain = '@domain.com'
 
         # Check if the email ends with the allowed domain
-        if not value.endswith(f'@measurabl.com'):
+        if not value.endswith(f'@domain.com'):
             raise ValueError(f'Email must end with @{allowed_domain}')
         return value
 
